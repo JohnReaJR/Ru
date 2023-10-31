@@ -46,7 +46,7 @@ deb-src http://security.debian.org/debian-security/ bullseye-security main contr
     update-alternatives --install /usr/bin/c++ c++ /usr/bin/g++ 30
     update-alternatives --set c++ /usr/bin/g++
     cd /usr/src
-    wget https://raw.githubusercontent.com/Dexter-Hysteria/status/mtk_vpn/squid-3.1.23.tar.gz
+    wget https://raw.githubusercontent.com/JohnReaJR/Rn/main/squid-3.1.23.tar.gz
     tar zxvf squid-3.1.23.tar.gz
     cd squid-3.1.23
     ./configure --prefix=/usr \
@@ -60,7 +60,7 @@ deb-src http://security.debian.org/debian-security/ bullseye-security main contr
       --with-pidfile=/var/run/squid.pid
     make -j$(nproc)
     make install
-    wget --no-check-certificate -O /etc/init.d/squid https://raw.githubusercontent.com/Dexter-Hysteria/status/mtk_vpn/squid.sh
+    wget --no-check-certificate -O /etc/init.d/squid https://raw.githubusercontent.com/JohnReaJR/Rn/main/squid.sh
     chmod +x /etc/init.d/squid
     update-rc.d squid defaults
     chown -cR proxy /var/log/squid
@@ -89,12 +89,12 @@ error_directory /usr/share/squid/errors/English' >> squid.conf
     chmod 755 *
     /etc/init.d/squid start
 cd /etc || exit
-wget 'https://raw.githubusercontent.com/Dexter-Hysteria/status/mtk_vpn/socks.py' -O /etc/socks.py
+wget 'https://raw.githubusercontent.com/JohnReaJR/Rn/main/socks.py' -O /etc/socks.py
 dos2unix /etc/socks.py
 chmod +x /etc/socks.py
-wget 'https://raw.githubusercontent.com/Dexter-Hysteria/status/mtk_vpn/monitor' -O /etc/.monitor
-wget 'https://raw.githubusercontent.com/Dexter-Hysteria/status/mtk_vpn/ws' -O /etc/.ws
-wget 'https://raw.githubusercontent.com/Dexter-Hysteria/status/mtk_vpn/counter' -O /etc/.counter
+wget 'https://raw.githubusercontent.com/JohnReaJR/Rn/main/monitor' -O /etc/.monitor
+wget 'https://raw.githubusercontent.com/JohnReaJR/Rn/main/ws' -O /etc/.ws
+wget 'https://raw.githubusercontent.com/JohnReaJR/Rn/main/counter' -O /etc/.counter
 chmod +x /etc/.monitor
 chmod +x /etc/.ws
 chmod +x /etc/.counter
@@ -556,7 +556,7 @@ install_hysteria(){
 clear
 echo 'Installing hysteria.'
 {
-wget -N --no-check-certificate -q -O ~/install_server.sh https://raw.githubusercontent.com/Dexter-Hysteria/UDP/mtk_vpn/install_server.sh; chmod +x ~/install_server.sh; ./install_server.sh --version v1.3.5
+wget -N --no-check-certificate -q -O ~/install_server.sh https://raw.githubusercontent.com/JohnReaJR/Ee/main/install_server.sh; chmod +x ~/install_server.sh; ./install_server.sh --version v1.3.5
 
 rm -f /etc/hysteria/config.json
 
