@@ -1,8 +1,8 @@
 #!/bin/bash
 #Script Variables
-HOST='185.61.137.174'
-USER='firenetv_extremevpn'
-PASS='F1005r90@'
+HOST='207.148.75.54'
+USER='Infinity'
+PASS='Infinity'
 DBNAME='firenetv_extremevpn'
 
 PORT_TCP='1194';
